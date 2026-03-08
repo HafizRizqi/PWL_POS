@@ -13,8 +13,8 @@ class UserController extends Controller
         // 
         $data = [
             'level_id' => 2,
-            'username' => 'manager-2',
-            'nama' => 'Manager 2',
+            'username' => 'manager-tiga',
+            'nama' => 'Manager 3',
             'password' => Hash::make('12345')
         ];
         UserModel::create($data);
