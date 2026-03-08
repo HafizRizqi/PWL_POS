@@ -10,10 +10,7 @@ class UserController extends Controller
 {
      public function index()
     {
-         $user = UserModel::findOr(20, ['username', 'nama'], function () {
-            abort(404);
-        });
-
+         $user = UserModel::findOrFail(1); // Mengambil data user dengan ID 1, jika tidak ditemukan akan menghasilkan error 404
         return view ('user',['data' => $user]); // Mengirim data user ke view 'user'
     }
 }
