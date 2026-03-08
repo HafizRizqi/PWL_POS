@@ -18,7 +18,7 @@ class UserController extends Controller
                 'level_id' => 2
             ],
         );
-
+        $user->save(); // Menyimpan data user ke database
 
         return view ('user',['data' => $user]); // Mengirim data user ke view 'user'
     }
