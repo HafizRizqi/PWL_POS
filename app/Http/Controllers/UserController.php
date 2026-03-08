@@ -10,9 +10,12 @@ class UserController extends Controller
 {
      public function index()
     {
-       $user = UserModel::all(); // Mengambil semua data user dari database
 
-        return view ('user',['data' => $user]); // Mengirim data user ke view 'user'
+        $user = UserModel::with('level')->get();
+        dd($user);
+        
+       //$user = UserModel::all(); // Mengambil semua data user dari database
+        //return view ('user',['data' => $user]); // Mengirim data user ke view 'user'
     }
 
         public function tambah()
